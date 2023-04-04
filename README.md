@@ -9,7 +9,8 @@
 
  One of the fundamental differences between the two is that horizontal scaling requires breaking a sequential piece of logic into smaller pieces so that they can be executed in parallel across multiple machines. In many respects, vertical scaling is easier because the logic really doesn’t need to change. Rather, you’re just running the same code on higher-spec machines. However, there are many other factors to consider when determining the appropriate approach.
 
-// @todo : add image here
+<img width="678" alt="image" src="https://user-images.githubusercontent.com/86356248/229762493-86f3f2b2-bb9e-4bfa-89bb-72f1b3b6b4d6.png">
+
 
 | Horizontal Scaling                           	| Vertical Scaling            	|
 |----------------------------------------------	|-----------------------------	|
@@ -31,3 +32,7 @@ Factors while considering scaling solution
 `Conclusion`:
 It doesn’t always make sense to choose between horizontal and vertical scaling. Moving between the two models is often a better choice. For instance, in storage, we often want to switch between a single local disk to a distributed storage system.
 Building flexibility into the system, where some layers of the application run on vertically scaled machines and other layers on horizontally scaled infrastructure remains a matter of designing for parallelization.
+
+Resources:
+1. [Youtube](https://youtu.be/xpDnVSmNFX0)
+2. [Article](https://www.section.io/blog/scaling-horizontally-vs-vertically/)
