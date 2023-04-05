@@ -127,16 +127,19 @@ Monolithic architecture is a traditional software development approach where the
 
 Pros:
 
-Simple to develop and test.
-Easy to deploy and manage since it is a single unit.
-All modules have access to the same data, so there is no need to handle distributed transactions.
-Good for small applications with limited scalability requirements.
+1. Simple to develop and test.
+2. Easy to deploy and manage since it is a single unit.
+3. All modules have access to the same data, so there is no need to handle distributed transactions.
+4. Good for small applications with limited scalability requirements.
+
 Cons:
 
-Monolithic applications can become large and complex over time, making them difficult to maintain.
-Scaling up can be a challenge, as adding more resources means scaling the entire application, even the parts that don't need scaling.
-A bug in one module can bring down the entire application.
-Deployment and updates require downtime, which can disrupt service.
+1. Monolithic applications can become large and complex over time, making them difficult to maintain.
+2. Scaling up can be a challenge, as adding more resources means scaling the entire application, even the parts that don't need scaling.
+3. A bug in one module can bring down the entire application.
+3. Deployment and updates require downtime, which can disrupt service.
+
+
 Example:
 An example of a monolithic application could be a web-based e-commerce platform, where all the functionalities are part of a single application. All the components such as customer service, inventory management, order management, and payment processing are combined in one application.
 
@@ -145,17 +148,19 @@ Microservices are a modern software development approach where the application i
 
 Pros:
 
-Microservices are more flexible and adaptable to change since each service can be updated and deployed independently.
-Scaling up is easier, as only the services that need scaling can be scaled, avoiding the need to scale the entire application.
-Services can be developed using different languages and technologies, allowing developers to use the best tool for each job.
-Faults are isolated to individual services, making it easier to locate and fix issues.
-Updates can be made without downtime, as only the services being updated are affected.
+1. Microservices are more flexible and adaptable to change since each service can be updated and deployed independently.
+2. Scaling up is easier, as only the services that need scaling can be scaled, avoiding the need to scale the entire application.
+3. Services can be developed using different languages and technologies, allowing developers to use the best tool for each job.
+4. Faults are isolated to individual services, making it easier to locate and fix issues.
+5. Updates can be made without downtime, as only the services being updated are affected.
+
 Cons:
 
-Microservices are more complex to develop and test, as each service needs to be tested individually as well as integrated with other services.
-Managing distributed data can be challenging, as each service may have its database or cache, requiring a strategy for data consistency and synchronization.
-Network latency can affect the overall performance of the application, as each service communication adds an overhead.
-Security can be more challenging as there are more points of entry.
+1. Microservices are more complex to develop and test, as each service needs to be tested individually as well as integrated with other services.
+2. Managing distributed data can be challenging, as each service may have its database or cache, requiring a strategy for data consistency and synchronization.
+3. Network latency can affect the overall performance of the application, as each service communication adds an overhead.
+4. Security can be more challenging as there are more points of entry.
+
 Example:
 An example of a microservice architecture could be a travel booking platform where each service handles a specific functionality such as hotel booking, flight booking, car rental, and payment processing. Each service can be independently scaled, updated, and deployed, providing a more flexible and adaptable system.
 
