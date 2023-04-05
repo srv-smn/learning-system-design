@@ -98,7 +98,23 @@ In summary, a distributed system that uses consistent hashing and load balancing
 
 Resources
 [Video 1](https://youtu.be/K0Ta65OqQkY)
+
+
 [Video 2](https://youtu.be/zaRkONvyGr8)
+
+
 [java code](https://github.com/coding-parrot/Low-Level-Design/blob/master/service-orchestrator/src/main/java/algorithms/ConsistentHashing.java)
 
+## Message/Task Queue
+A message/task queue that includes load balancing, notifier, and heartbeat check functionality is a powerful tool for building scalable and reliable distributed systems.
+
+Load balancing functionality in a message/task queue can help distribute workloads across multiple nodes or servers. With load balancing, tasks or messages can be distributed to different nodes in a way that balances the load and maximizes throughput. This can help to ensure that the system is scalable and can handle increased traffic or workload without becoming overloaded.
+
+Notifier functionality in a message/task queue can help to keep track of the status of tasks or messages. A notifier can be used to notify users or other systems when tasks are completed or when certain events occur. This can help to improve the overall reliability of the system and reduce the risk of errors or delays.
+
+Heartbeat check functionality in a message/task queue can help to detect failures or issues in the system. By periodically sending heartbeat messages, a node or server can notify other nodes in the system that it is still functioning properly. If a node fails to respond to heartbeat messages, it can be assumed that the node has failed or become unavailable. This can trigger a failover or recovery process to ensure that the system remains available and operational.
+
+By combining load balancing, notifier, and heartbeat check functionality, a message/task queue can provide a powerful platform for building scalable and reliable distributed systems. This type of system can help to ensure that tasks are distributed efficiently, notifications are delivered reliably, and failures are detected and handled quickly. This can improve the overall performance and availability of the system and help to ensure that it can handle increased traffic or workload as needed.
+
+reference: [video](https://youtu.be/oUJbuFMyBDk)
 
