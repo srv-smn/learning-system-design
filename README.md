@@ -119,6 +119,9 @@ By combining load balancing, notifier, and heartbeat check functionality, a mess
 reference: [video](https://youtu.be/oUJbuFMyBDk)
 
 ## Monolithic VS Microservice
+![image](https://user-images.githubusercontent.com/47235134/230071020-74f4ed5b-d414-4a76-90d0-50b4aaa8aadb.png)
+
+
 Monolithic Architecture:
 Monolithic architecture is a traditional software development approach where the entire application is built as a single, self-contained unit. All the modules of the application are tightly coupled, and a change in one module affects the entire application. The monolithic application is deployed on a single server or a cluster of servers.
 
