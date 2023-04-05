@@ -69,3 +69,36 @@ Few concepts of HLD
 10. `Extensible`: This refers to designing a system so that it can be easily extended or modified to meet changing requirements or accommodate new features. Extensibility can improve the system's flexibility, maintainability, and scalability.
 
 
+## Consistent hashing and Load balancing
+Consistent hashing and load balancing are two concepts that are often used together in distributed computing to improve the scalability and reliability of systems.
+
+Consistent hashing is a technique used to distribute data and workload across multiple servers in a consistent and efficient manner. It is based on the idea of mapping data items and servers onto a fixed set of hash values, which are used to determine the server responsible for handling a particular data item. By using a hash function to map data items onto servers, consistent hashing ensures that the distribution of data is balanced across the servers, and that the addition or removal of servers from the cluster does not require a complete remapping of data items.
+
+Load balancing, on the other hand, is a technique used to distribute incoming traffic across multiple servers to ensure that no single server is overloaded with requests. Load balancing can be implemented using different algorithms, such as round-robin, random, or least connections, to distribute the traffic across the servers. Load balancing also involves monitoring the servers to detect any failures or performance issues and redirecting traffic to healthy servers.
+
+When used together, consistent hashing and load balancing can improve the scalability and reliability of distributed systems by distributing workload and traffic across multiple servers in a consistent and efficient manner. By using consistent hashing to distribute data and load balancing to distribute traffic, the system can handle large amounts of data and traffic while ensuring that no single server is overloaded with requests. Additionally, if a server fails, the consistent hashing algorithm can route the affected data to another server in the cluster, while the load balancer can redirect traffic to healthy servers. This makes the system more resilient to failures and improves the overall performance and availability of the system.
+
+what will happen if server fails ?
+
+1. If a server fails in a distributed system that uses consistent hashing and load balancing, the system should be able to continue functioning without any interruption or loss of data. Here's what typically happens when a server fails:
+
+2. When a server fails, it becomes unavailable and stops responding to requests. This may be due to hardware failure, network issues, or software bugs.
+
+3. The load balancer detects that the failed server is unresponsive and removes it from the list of active servers.
+
+4. The consistent hashing algorithm maps the data items that were previously assigned to the failed server to the next available server in the ring. This ensures that the data items remain available and are not lost.
+
+5. Any incoming requests that were previously directed to the failed server are now redirected by the load balancer to another available server.
+
+6. If the failed server is replaced by a new server, the consistent hashing algorithm will assign some of the data items that were previously assigned to the failed server to the new server, and the load balancer will start directing incoming requests to the new server.
+
+7. As the system continues to operate, the consistent hashing algorithm may need to rebalance the distribution of data across the servers to ensure that the workload is evenly distributed.
+
+In summary, a distributed system that uses consistent hashing and load balancing is designed to be resilient to server failures. The system can continue to function and serve requests even if a server fails, by redistributing the workload and data to other available servers. This makes the system more reliable and helps to minimize downtime and data loss.
+
+Resources
+[Video 1](https://youtu.be/K0Ta65OqQkY)
+[Video 2](https://youtu.be/zaRkONvyGr8)
+[java code](https://github.com/coding-parrot/Low-Level-Design/blob/master/service-orchestrator/src/main/java/algorithms/ConsistentHashing.java)
+
+
