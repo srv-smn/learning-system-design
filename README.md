@@ -118,3 +118,46 @@ By combining load balancing, notifier, and heartbeat check functionality, a mess
 
 reference: [video](https://youtu.be/oUJbuFMyBDk)
 
+## Monolithic VS Microservice
+Monolithic Architecture:
+Monolithic architecture is a traditional software development approach where the entire application is built as a single, self-contained unit. All the modules of the application are tightly coupled, and a change in one module affects the entire application. The monolithic application is deployed on a single server or a cluster of servers.
+
+Pros:
+
+Simple to develop and test.
+Easy to deploy and manage since it is a single unit.
+All modules have access to the same data, so there is no need to handle distributed transactions.
+Good for small applications with limited scalability requirements.
+Cons:
+
+Monolithic applications can become large and complex over time, making them difficult to maintain.
+Scaling up can be a challenge, as adding more resources means scaling the entire application, even the parts that don't need scaling.
+A bug in one module can bring down the entire application.
+Deployment and updates require downtime, which can disrupt service.
+Example:
+An example of a monolithic application could be a web-based e-commerce platform, where all the functionalities are part of a single application. All the components such as customer service, inventory management, order management, and payment processing are combined in one application.
+
+Microservice Architecture:
+Microservices are a modern software development approach where the application is divided into independent services, each running in its process and communicating with other services through lightweight mechanisms. Each microservice is developed, deployed, and maintained independently, enabling teams to work on different parts of the application without interfering with each other.
+
+Pros:
+
+Microservices are more flexible and adaptable to change since each service can be updated and deployed independently.
+Scaling up is easier, as only the services that need scaling can be scaled, avoiding the need to scale the entire application.
+Services can be developed using different languages and technologies, allowing developers to use the best tool for each job.
+Faults are isolated to individual services, making it easier to locate and fix issues.
+Updates can be made without downtime, as only the services being updated are affected.
+Cons:
+
+Microservices are more complex to develop and test, as each service needs to be tested individually as well as integrated with other services.
+Managing distributed data can be challenging, as each service may have its database or cache, requiring a strategy for data consistency and synchronization.
+Network latency can affect the overall performance of the application, as each service communication adds an overhead.
+Security can be more challenging as there are more points of entry.
+Example:
+An example of a microservice architecture could be a travel booking platform where each service handles a specific functionality such as hotel booking, flight booking, car rental, and payment processing. Each service can be independently scaled, updated, and deployed, providing a more flexible and adaptable system.
+
+In summary, monolithic architecture and microservice architecture are two different software development approaches, each with its pros and cons. Monolithic architecture is simpler to develop and manage, but it can become complex and difficult to maintain as the application grows. Microservice architecture is more flexible and scalable, but it requires more effort to develop and manage, and it may introduce additional challenges related to data consistency and security.
+
+
+
+
